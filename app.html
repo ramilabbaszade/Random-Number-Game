@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Random Number App</title>
+    <style>
+        body{
+            text-align: center;
+            /* background-color: rgb(255, 255, 255); */
+        }
+        #startBtn, #findBtn, #number,#restartBtn{
+            width: 200px;
+            height: 40px;
+            position: relative;
+            top: 22em;
+        }
+        #startBtn, #findBtn, #number, #restartBtn{
+            border: solid 1px rgb(31, 93, 238);
+            background: none;
+            color: rgb(31, 93, 238);
+            border-radius: 8px;
+        }
+        #startBtn:hover, #findBtn:hover{
+            border: solid 1px rgb(31, 93, 238);
+            background: rgb(31, 93, 238);
+            color: rgb(255, 255, 255)
+        }
+        #startBtn:focus{
+            background:green;
+            color: white;
+            outline: none;
+            border: none;
+        }
+        #restartBtn{
+            background-color: green;
+            color: white;
+            border: none;
+            display:none;
+            text-align: center;
+            cursor:pointer;
+        }
+        #restartBtn:focus{
+            outline: none;
+            border: solid 1px green;
+            background-color: white;
+            color: green;
+            text-align: center;
+            cursor:pointer;
+        }
+        #number:placeholder-shown{
+            font-size: 16px;
+            text-align: center;
+        }
+        #number::placeholder{
+            color: rgba(31, 93, 238, 0.637);
+        }
+        #number{
+            font-size: 16px;
+            text-align: center;
+        }
+        #number:focus{
+            outline: none;
+        }
+        #number:focus::placeholder{
+            color: transparent;
+        }
+
+    
+    </style>
+</head>
+<body>
+    
+    <h1 style="font-size:50px; position:relative; top:5em;">Random Number Game</h1><hr style="position:relative; top:16em; width: 50%">
+    <input type="button" value="Start" id="startBtn">
+    <input type="button" value="Check" id="findBtn" disabled><br><br>
+    <input type="text" placeholder="Type your number here..." id="number" disabled>
+    <p id="showRight" style="font-size:50px; position:relative; top:13em;font-size: 18px;"></p><br>
+    <p id="showCounter" style="font-size:50px; position:relative; top:10em;font-size: 18px;"></p>
+    <input id="restartBtn" value="Restart" onClick="window.location.href=window.location.href">
+    
+    
+    <script src="app.js"></script>
+</body>
+</html>
